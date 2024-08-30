@@ -25,7 +25,7 @@ The **Vyper Remote Compiler** extension for Visual Studio Code enables seamless 
 Alternatively, you can install the extension using the command line:
 
 ``` bash 
-code --install-extension vyper-remote-compiler 
+code --install-extension itsobaa.vyper-remote-compiler 
 ```
 
 
