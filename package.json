@@ -2,6 +2,7 @@
   "name": "vyper-remote-compiler",
   "displayName": "vyper-remote-compiler",
   "description": "Ethereum Vyper Contract remote compiler support for Visual Studio Code",
+  "repository": "https://gitea.svc.obaa.cloud/obaa/vyper-remote-compiler.git",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.92.0"

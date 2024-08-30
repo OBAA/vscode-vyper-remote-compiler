@@ -79,7 +79,7 @@ To contribute to the development of this extension:
 1. Clone the repository:
 
 ``` bash
-git clone https://gitea.svc.obaa.cloud/obaa/vyper-remote-compiler.git
+git clone https://gitea.svc.obaa.cloud/obaa/vscode-vyper-remote-compiler.git
 ```
 2. Install dependencies:
 
