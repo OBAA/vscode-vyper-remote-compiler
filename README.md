@@ -24,7 +24,8 @@ The **Vyper Remote Compiler** extension for Visual Studio Code enables seamless 
 
 Alternatively, you can install the extension using the command line:
 
-``` bash code --install-extension vyper-remote-compiler 
+``` bash 
+code --install-extension vyper-remote-compiler 
 ```
 
 
@@ -40,6 +41,7 @@ To configure the extension, add the following settings to your `settings.json` f
 ```
 
 `vyperRemoteCompile.compilerAddress`: The URL of your remote Vyper compiler service.
+
 `vyperRemoteCompile.compileOnSave`: Set to true to enable automatic compilation on file save.
 
 
@@ -62,7 +64,7 @@ To configure the extension, add the following settings to your `settings.json` f
 
 To run the extension tests:
 1. Open the terminal in VS Code.
-2. Run npm test or npx vscode-test.
+2. Run `npm test` or `npx vscode-test`.
 
 Tests include:
 - Checking if commands are properly registered.
@@ -77,19 +79,16 @@ To contribute to the development of this extension:
 1. Clone the repository:
 
 ``` bash
-##
-        git clone https://gitea.svc.obaa.cloud/obaa/vyper-remote-compiler.git
+git clone https://gitea.svc.obaa.cloud/obaa/vyper-remote-compiler.git
 ```
 2. Install dependencies:
 
 ```bash
-Copy code
 npm install
 ```
 3. Run the extension locally:
 
 ```bash
-Copy code
 code .
 ```
 4. Debug and test the extension using VS Code's built-in debugging features.
