@@ -1,0 +1,49 @@
+{
+    "Function": {
+        "prefix": "def",
+        "body": [
+            "def ${1:function_name}(${2:arguments}):",
+            "\t${3:pass}"
+        ],
+        "description": "Define a new function"
+    },
+    "Constructor": {
+        "prefix": "constructor",
+        "body": [
+            "def __init__(${1:arguments}):",
+            "\t${2:pass}"
+        ],
+        "description": "Define a constructor"
+    },
+    "Event": {
+        "prefix": "event",
+        "body": [
+            "event ${1:event_name}(${2:arguments})",
+            "\t${3:pass}"
+        ],
+        "description": "Define a new event"
+    },
+    "Modifier": {
+        "prefix": "modifier",
+        "body": [
+            "modifier ${1:modifier_name}(${2:arguments}):",
+            "\t${3:pass}"
+        ],
+        "description": "Define a new modifier"
+    },
+    "Mapping": {
+        "prefix": "mapping",
+        "body": [
+            "${1:variable_name} = map(${2:key_type} => ${3:value_type})"
+        ],
+        "description": "Define a new mapping"
+    },
+    "Struct": {
+        "prefix": "struct",
+        "body": [
+            "struct ${1:StructName}:",
+            "\t${2:field_name}: ${3:type}"
+        ],
+        "description": "Define a new struct"
+    }
+}

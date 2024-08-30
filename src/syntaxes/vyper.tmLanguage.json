@@ -1,0 +1,62 @@
+{
+    "name": "Vyper",
+    "scopeName": "source.vyper",
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#keyword"
+        },
+        {
+            "include": "#string"
+        },
+        {
+            "include": "#number"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [
+                {
+                    "match": "#.*",
+                    "name": "comment.line.number-sign.vyper"
+                }
+            ]
+        },
+        "keyword": {
+            "patterns": [
+                {
+                    "match": "\\b(@deploy|@external|@internal)\\b",
+                    "name": "punctuation.definition.group.vyper"
+                },
+                {
+                    "match": "\\b(if|else|while|for|def|self|return|assert|require|revert|event|emit|contract|interface|library|modifier|payable|view|pure|storage|memory|uint|int|bytes|string|address|mapping|struct|function|constructor|fallback)\\b",
+                    "name": "keyword.control.vyper"
+                }
+            ]
+        },
+        "string": {
+            "patterns": [
+                {
+                    "begin": "\"",
+                    "end": "\"",
+                    "name": "string.quoted.double.vyper"
+                },
+                {
+                    "begin": "'",
+                    "end": "'",
+                    "name": "string.quoted.single.vyper"
+                }
+            ]
+        },
+        "number": {
+            "patterns": [
+                {
+                    "match": "\\b\\d+\\b",
+                    "name": "constant.numeric.vyper"
+                }
+            ]
+        }
+    }
+}

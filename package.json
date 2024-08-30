@@ -1,0 +1,104 @@
+{
+  "name": "vyper-remote-compiler",
+  "displayName": "vyper-remote-compiler",
+  "description": "Ethereum Vyper Contract remote compiler support for Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.vyperRemotecompile",
+        "title": "VRC - Compile File"
+      },
+      {
+        "command": "extension.openVyperRemoteCompilerSettings",
+        "title": "VRC - Open Compiler Settings"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Vyper Remote Compiler Settings",
+      "properties": {
+          "vyperRemoteCompile.compilerAddress": {
+              "type": "string",
+              "default": "http://localhost:8000/compile",
+              "description": "The address of the compiler server."
+          },
+          "vyperRemoteCompile.compileOnSave": {
+            "type": "boolean",
+            "default": false,
+            "description": "Automatically compile Vyper files on save."
+          }
+      }
+    },
+    "files.associations": {
+      "*.vy": "vyper"
+    },
+    "keybindings": [
+      {
+        "command": "extension.vyperRemotecompile",
+        "key": "ctrl+shift+c",
+        "when": "editorTextFocus"
+      }
+    ],
+    "languages": [
+      {
+        "id": "vyper",
+        "aliases": ["Vyper", "vyper"],
+        "extensions": [".vy"],
+        "configuration": "./src/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vyper",
+        "scopeName": "source.vyper",
+        "path": "./src/syntaxes/vyper.tmLanguage.json"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.vyperRemotecompile",
+          "when": "resourceExtname == .vy",
+          "group": "navigation"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "vyper",
+        "path": "./src/snippets/vyper.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.92.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.7.5"
+  }
+}
